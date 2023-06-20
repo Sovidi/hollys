@@ -1,0 +1,178 @@
+@charset "utf-8";
+@import "../_reset";
+
+header{
+    @include flex();
+    margin: 100px auto;
+    h1{img{width: 110%;}}
+    p{
+        font-size: 24px;
+    }
+}
+
+main{
+    .first-content-bgimage{
+        position: relative;
+        @include flex();
+        h2{
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+            color: rgba(128, 128, 128, 0.631);
+            font-size: 50px;
+        }
+        figure{img{width: 100%;}}
+    }
+    
+    .first-content{
+        .text{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 800px;
+            p{
+                margin: 20px auto;
+                &:nth-of-type(1){
+                    b{font-size: 34px;}
+                }
+                &:nth-of-type(2){
+                    &:after{
+                        content: "";
+                        border: 1px solid;
+                        display: inline-block;
+                        width: 100px;
+                    }
+                }
+                &:nth-of-type(3){
+                    font-size: 24px;}
+            }
+        }
+    }
+    .second-content{
+        margin-bottom: 200px;
+        .second-content-withimg{
+            display: flex;
+            justify-content: space-evenly;
+            > div{
+                > figure{> img{width: 100%;}}
+                > p{
+                    font-size: 24px;
+                    text-align: center;
+                    margin: 30px auto;
+                    color: grey;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    margin: 110px auto;
+    margin-bottom: 300px;
+    .footer-content{
+        height: 613px;
+        position: relative;
+        > figure{
+            position: absolute;
+            > img{width: 100%;}
+        }
+        .footer-text{
+            white-space: pre-line;
+            display: flex;
+            flex-direction: column;
+            > p{
+                &:nth-of-type(1){
+                    font-weight: bolder;
+                    font-size: 30px;
+                    color: red;
+                }
+                &:nth-of-type(2){
+                    font-weight: bold;
+                }
+                span{
+                    font-weight: bolder;
+                    font-size: 30px;
+                    color: rgb(0, 0, 0);
+                }
+            }
+        }
+        .footer-drinks{
+            bottom: -13%;
+            right: 10%;
+            display: flex;
+            justify-content: space-evenly;
+            white-space: pre-line;
+            > div { 
+                margin: 0px 30px;
+                &:nth-of-type(1){
+                    text-align: center;
+                    > figure{
+                        width: 170px;
+                        height: 170px;
+                        background-color: rgb(255, 255, 255);
+                        border: 3px solid grey;
+                        border-radius: 100px;
+                        box-shadow: 5px 5px 10px grey;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 50%;
+                        }
+                        }
+                    > figcaption{
+                        > b{margin: 20px;}
+                        > p{}    
+                    }
+                }
+                &:nth-of-type(2){
+                    text-align: center;
+                    > figure{
+                        width: 170px;
+                        height: 170px;
+                        background-color: rgb(255, 255, 255);
+                        border: 3px solid grey;
+                        border-radius: 100px;
+                        box-shadow: 5px 5px 10px grey;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 60%;
+                        }
+                        }
+                    > figcaption{
+                        > b{margin: 20px;}
+                        > p{}    
+                    }
+                }
+                &:nth-of-type(3){
+                    text-align: center;
+                    > figure{
+                        width: 170px;
+                        height: 170px;
+                        background-color: rgb(255, 255, 255);
+                        border: 3px solid grey;
+                        border-radius: 100px;
+                        box-shadow: 5px 5px 10px grey;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 30%;
+                        }
+                        }
+                    > figcaption{
+                        > b{margin: 20px;}
+                        > p{}    
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@import "../_mobile";
